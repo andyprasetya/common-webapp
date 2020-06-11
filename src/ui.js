@@ -34,35 +34,6 @@ ui._menuActionsApply = function(){
       mainAnchorElement.innerHTML = ``;
       if(this.getAttribute('id') == 'home' || this.getAttribute('id') == 'landingpage'){
         mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateHome());
-      } else if(this.getAttribute('id') == 'formsspdbphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateFormSSPDBPHTB());
-        modules._applyFormSSPDBPHTB();
-      } else if(this.getAttribute('id') == 'formreduksibphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateFormReduksiBPHTB());
-      } else if(this.getAttribute('id') == 'progressverifybphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateProgressVerifyBPHTB());
-      } else if(this.getAttribute('id') == 'progressverifyreduksibphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateProgressVerifyReduksiBPHTB());
-      } else if(this.getAttribute('id') == 'listverifybphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateListVerifyBPHTB());
-      } else if(this.getAttribute('id') == 'listsspdnihil'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateListSSPDNihil());
-      } else if(this.getAttribute('id') == 'liststatusbayarbphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateListStatusBayarBPHTB());
-      } else if(this.getAttribute('id') == 'listverifyreduksibphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateListVerifyReduksiBPHTB());
-      } else if(this.getAttribute('id') == 'lbppat'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateLBPPAT());
-      } else if(this.getAttribute('id') == 'lphppat'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateLPHPPAT());
-      } else if(this.getAttribute('id') == 'mapobjectbphtb'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateMapObjectBPHTB());
-      } else if(this.getAttribute('id') == 'accesscredential'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateAccessCredential());
-      } else if(this.getAttribute('id') == 'contactinfo'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateContactInfo());
-      } else if(this.getAttribute('id') == 'apphelp'){
-        mainAnchorElement.insertAdjacentHTML('afterbegin', templates._appTemplateAppHelp());
       } else {
         console.log('__undefined__');
       }
@@ -102,7 +73,7 @@ ui._loginBoxAction = function(){
       let form = document.querySelector('#loginform'),
       formData = helpers.serialize(form), 
       jsonData = helpers.QueryStringToJSON(decodeURIComponent(formData));
-      fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doNotarisPPATLogin', {
+      fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doLogin', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -156,7 +127,7 @@ ui._loginBoxAction = function(){
 ui.doExitApplication = function(){
   let activeSession = sessionStorage.getItem('sessionid');
   if(activeSession){
-    fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doNotarisPPATLogoff', {
+    fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doLogoff', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
