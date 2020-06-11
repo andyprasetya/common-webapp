@@ -26,7 +26,7 @@ if(!activeSession){
     document.onkeypress = resetTimer;
 
     function logout() {
-      fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doNotarisPPATLogoff', {
+      fetch(''+ config.endPointBaseURL +''+ config.endPointBaseDirectory +'/doLogoff', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
