@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+@import "../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+
+$padding-75-75-5-75: 0.75rem 0.75rem 0.5rem 0.75rem;
+$padding-0-75-5-75: 0 0.75rem 0.5rem 0.75rem;
+
+html {
+  overflow-y: auto;
+}
+
+.custom-text {
+  font-size: 11px;
+}
+.login-hr{
+  border-bottom: 1px solid black;
+}
+.bg-img { 
+  background-image: url('./img/frontpage.jpg');
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #000;
+}
+
+.column.is-6-desktop.is-12-mobile.custom-section-1-left, 
+.column.is-6-desktop.is-12-mobile.custom-section-1-right {
+  padding: $padding-75-75-5-75;
+}
+
+.column.is-6-desktop.is-12-mobile.custom-section-nth-left, 
+.column.is-6-desktop.is-12-mobile.custom-section-nth-right {
+  padding: $padding-0-75-5-75;
+}
+
+.column.is-12-desktop.is-12-mobile.custom-section-2-fullwidth {
+  padding: $padding-0-75-5-75;
+}
+
+.modal-card-foot.custom-wpcompleteinfo-modal-footer {
+  justify-content: flex-end;
+}
+.modal-card-foot.custom-spptinfo-modal-footer {
+  justify-content: flex-end;
+}
+.modal-card-foot.custom-map-modal-footer {
+  justify-content: space-between;
+}
+
+.custom-checkbox-label {
+  margin-left: 10px;
+}
+
+.custom-level-first-item {
+  margin-bottom: 0.25rem !important;
+}
+
+.custom-level-nth-item {
+  margin-bottom: 0.25rem !important;
+}
+
+.custom-level-last-item {
+  margin-bottom: 0.75rem !important;
+}
+
+@media screen and (max-width: 768px){
+  .button.has-background-dark.has-text-light.is-outlined.is-radiusless.is-fullwidth-mobile {
+    display: flex;
+    width: 100%;
+  }
+  .column.is-6-desktop.is-12-mobile.custom-section-1-right {
+    padding: $padding-0-75-5-75;
+  }
+}
