@@ -1,7 +1,7 @@
 {
-  "name": "rollup-bulma-dashboard",
+  "name": "common-webapp",
   "version": "1.0.0",
-  "description": "A Rollup + Bulma-based Dashboard Project",
+  "description": "A Rollup + Bulma-based Project",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/andyprasetya/rollup-bulma-dashboard.git"
+    "url": "git+https://github.com/andyprasetya/common-webapp.git"
   },
   "keywords": [
     "rollup",
@@ -19,9 +19,9 @@
   "author": "andyprasetya@opense7en.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/andyprasetya/rollup-bulma-dashboard/issues"
+    "url": "https://github.com/andyprasetya/common-webapp/issues"
   },
-  "homepage": "https://gitlab.com/andyprasetya/rollup-bulma-dashboard#readme",
+  "homepage": "https://github.com/andyprasetya/common-webapp#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.0",
@@ -38,21 +38,6 @@
     "bulma": "^0.8.0",
     "crypto-js": "latest",
     "date-fns": "latest",
-    "file-saverjs": "latest",
-    "html2pdf.js": "latest",
-    "leaflet": "latest",
-    "leaflet-draw": "latest",
-    "leaflet-groupedlayercontrol": "latest",
-    "leaflet.control.layers.tree": "latest",
-    "leaflet.markercluster": "latest",
-    "numeral": "latest",
-    "pdfobject": "latest",
-    "simple-datatables": "latest",
-    "tableexport": "latest",
-    "terraformer": "latest",
-    "terraformer-wkt-parser": "latest",
-    "vega": "^5.8.0",
-    "vega-embed": "^6.0.0",
-    "vega-lite": "^4.0.0-beta.11"
+    "numeral": "latest"
   }
 }
